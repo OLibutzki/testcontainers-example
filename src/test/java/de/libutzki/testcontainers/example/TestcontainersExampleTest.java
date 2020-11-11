@@ -14,7 +14,8 @@ public class TestcontainersExampleTest {
 	private final PostgreSQLContainer<?> postgresqlContainer = new PostgreSQLContainer<>( "postgres:12.4" )
 			.withDatabaseName( "foo" )
 			.withUsername( "foo" )
-			.withPassword( "secret" );
+			.withPassword( "secret" )
+			.withNetworkMode( "devops-net" );
 
 	@Test
 	public void test( ) {
